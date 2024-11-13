@@ -1,7 +1,7 @@
 # E-commerce-website
 HTML and JavaScript structure for the Nike store looks comprehensive and includes various features like sliders, product options, a cart system, and animations. Here are a few suggestions to enhance functionality and clean up the code:
 
-CSS Styling Tweaks:
+**CSS Styling Tweaks:**
 
 Ensure the cart icon is aligned consistently by adding styles for different screen sizes in style.css.
 Use display: none for the payment section initially and only show it when the "BUY NOW!" button is clicked.
@@ -18,12 +18,12 @@ Accessibility:
 Add aria-label attributes to important interactive elements like the cart icon, close buttons, and product buttons.
 Use role="button" for div elements acting as buttons for better screen reader support.
 
-Technologies
+**Technologies**
 
 List the main technologies or libraries used in your project:
 
-React: For building the user interface.
+**React:** For building the user interface.
 
-Node.js and Express: For the backend (if applicable).
+**Node.js and Express:** For the backend (if applicable).
 
-MongoDB / MySQL / Firebase: Database used (if applicable).
+**MongoDB / MySQL / Firebase**: Database used (if applicable).
