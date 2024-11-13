@@ -26,9 +26,19 @@
                 </div>
             </div>
             <!-- Add Cart Icon in the navTop section -->
-    <div class="cart" id="cart" style="position: fixed;margin-left: 85%;">
-        <i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span>
-    </div>
+             <div class="user-icon" style="position: fixed; margin-left: 80%; cursor: pointer;" onclick="toggleMenu()">
+                <i class="fas fa-user"></i> 
+            </div>
+
+            <!-- The hidden buttons (My Cart and Log Out) -->
+            <div id="userMenu" class="userMenu" style="display: none; position: fixed; margin-left: 80%; margin-top: 40px;">
+                <button id="myCartBtn" onclick="goToCart()">My Cart</button>
+                <button id="logoutBtn" onclick="logout()">Log Out</button>
+            </div>
+
+            <div class="cart" id="cart" style="position: fixed;margin-left: 85%;">
+                <i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span>
+            </div>
 
             <div class="navItem">
                 <span class="limitedOffer"><b>Limited Offer!</b></span>
@@ -424,6 +434,32 @@
         updateCart();
         document.querySelector('.payment').style.display = 'none';
     });
+
+    function toggleMenu() {
+        const userMenu = document.getElementById('userMenu');
+        
+        // Toggle the display between 'none' and 'block'
+        if (userMenu.style.display === 'none' || userMenu.style.display === '') {
+            userMenu.style.display = 'block';
+        } else {
+            userMenu.style.display = 'none';
+        }
+    }
+
+    // Function for "My Cart" button
+    function goToCart() {
+        alert("Redirecting to your cart...");
+        // Redirect to cart page (example)
+        window.location.href = 'cart.html'; 
+    }
+
+    // Function for "Log Out" button
+    function logout() {
+        alert("Logging out...");
+        // Log out functionality (example)
+        // You can add logic to log the user out here
+        window.location.href = 'login.html';
+    }
 </script>
 
 </body>
