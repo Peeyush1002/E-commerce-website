@@ -1,0 +1,467 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+    <title>Nike Store</title>
+</head>
+
+<body>
+    <nav id="nav">
+        <div class="navTop" data-aos="fade-down" data-aos-duration="2000">
+            <div class="navItem">
+                <a href="index.html">  <img src="./img/sneakers.png" alt=""></a>
+            </div>
+            <div class="navItem">
+                <div class="search">
+                    <input type="text" placeholder="Search..." class="searchInput"> &nbsp;&nbsp;
+                    <img src="./img/search.png" width="20" height="20" alt="" class="searchIcon">
+                </div>
+            </div>
+            <!-- Add Cart Icon in the navTop section -->
+             <div class="user-icon" style="position: fixed; margin-left: 80%; cursor: pointer;" onclick="toggleMenu()">
+                <i class="fas fa-user"></i> 
+            </div>
+
+            <!-- The hidden buttons (My Cart and Log Out) -->
+            <div id="userMenu" class="userMenu" style="display: none; position: fixed; margin-left: 80%; margin-top: 40px;">
+                <button id="myCartBtn" onclick="goToCart()">My Cart</button>
+                <button id="logoutBtn" onclick="logout()">Log Out</button>
+            </div>
+
+            <div class="cart" id="cart" style="position: fixed;margin-left: 85%;">
+                <i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span>
+            </div>
+
+            <div class="navItem">
+                <span class="limitedOffer"><b>Limited Offer!</b></span>
+            </div>
+        </div>
+        <div class="navBottom" data-aos="fade-down" data-aos-duration="2000">
+            <h3 class="menuItem">JORDAN</h3>
+            <h3 class="menuItem">AIR FORCE</h3>
+            <h3 class="menuItem">BLAZER</h3>
+            <h3 class="menuItem">CRATER</h3>
+            <h3 class="menuItem">HIPPIE</h3>
+        </div>
+    </nav>
+    <div class="slider">
+    <div class="sliderWrapper">
+        <!-- Move the Jordan item to the top -->
+        <div class="sliderItem" data-aos="fade-up" data-aos-duration="2000">
+            <img src="./img/jordan.png" alt="" class="sliderImg">
+            <div class="sliderBg"></div>
+            <h1 class="sliderTitle">AIR JORDAN</br> NEW</br> SEASON</h1>
+            <h2 class="sliderPrice"> ₹ 14900</h2>
+            <a href="#product">
+                <button class="buyButton" >BUY NOW!</button>
+            </a>
+        </div>
+
+        <!-- Air Force item -->
+        <div class="sliderItem" data-aos="fade-up" data-aos-duration="2000">
+            <img src="./img/air.png" alt="" class="sliderImg">
+            <div class="sliderBg"></div>
+            <h1 class="sliderTitle">AIR FORCE</br> NEW</br> SEASON</h1>
+            <h2 class="sliderPrice">₹ 11900</h2>
+            <a href="#product">
+                <button class="buyButton">BUY NOW!</button>
+            </a>
+        </div>
+
+        <!-- Blazer item -->
+        <div class="sliderItem" data-aos="fade-up" data-aos-duration="2000">
+            <img src="./img/blazer.png" alt="" class="sliderImg">
+            <div class="sliderBg"></div>
+            <h1 class="sliderTitle">BLAZER</br> NEW</br> SEASON</h1>
+            <h2 class="sliderPrice">₹ 10900</h2>
+            <a href="#product">
+                <button class="buyButton">BUY NOW!</button>
+            </a>
+        </div>
+
+        <!-- Crater item -->
+        <div class="sliderItem" data-aos="fade-up" data-aos-duration="2000">
+            <img src="./img/crater.png" alt="" class="sliderImg">
+            <div class="sliderBg"></div>
+            <h1 class="sliderTitle">CRATER</br> NEW</br> SEASON</h1>
+            <h2 class="sliderPrice">₹ 12900</h2>
+            <a href="#product">
+                <button class="buyButton">BUY NOW!</button>
+            </a>
+        </div>
+
+        <!-- Hippie item -->
+        <div class="sliderItem" data-aos="fade-up" data-aos-duration="2000">
+            <img src="./img/hippie.png" alt="" class="sliderImg">
+            <div class="sliderBg"></div>
+            <h1 class="sliderTitle">HIPPIE</br> NEW</br> SEASON</h1>
+            <h2 class="sliderPrice">₹ 9900</h2>
+            <a href="#product">
+                <button class="buyButton">BUY NOW!</button>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+    <div class="features">
+        <div class="feature" data-aos="fade-up" data-aos-duration="2000">
+            <img src="./img/shipping.png" alt="" class="featureIcon">
+            <span class="featureTitle">FREE SHIPPING</span>
+            <span class="featureDesc">Free worldwide shipping on all orders.</span>
+        </div>
+        <div class="feature" data-aos="fade-up" data-aos-duration="2000">
+            <img class="featureIcon" src="./img/return.png" alt="">
+            <span class="featureTitle">30 DAYS RETURN</span>
+            <span class="featureDesc">No question return and easy refund in 14 days.</span>
+        </div>
+        <div class="feature" data-aos="fade-up" data-aos-duration="2000">
+            <img class="featureIcon" src="./img/gift.png" alt="">
+            <span class="featureTitle">GIFT CARDS</span>
+            <span class="featureDesc">Buy gift cards and use coupon codes easily.</span>
+        </div>
+        <div class="feature" data-aos="fade-up" data-aos-duration="2000">
+            <img class="featureIcon" src="./img/contact.png" alt="">
+            <span class="featureTitle">CONTACT US!</span>
+            <span class="featureDesc">Keep in touch via email and support system.</span>
+        </div>
+    </div>
+
+
+    <div class="product" id="product" data-aos="fade-up" data-aos-duration="2000">
+        <img src="./img/jordan.png" alt="" class="productImg">
+        <div class="productDetails">
+            <h1 class="productTitle">AIR JORDAN</h1>
+            <h2 class="productPrice">Rs 19900</h2>
+            <p class="productDesc">Lorem ipsum dolor sit amet consectetur impal adipisicing elit. Alias assumenda dolorum doloremque sapiente aliquid aperiam.</p>
+            <div class="colors">
+                <div class="color"></div>
+                <div class="color"></div>
+            </div>
+            <div class="sizes">
+                <div class="size">42</div>
+                <div class="size">43</div>
+                <div class="size">44</div>
+            </div>
+            <button class="productButton" onclick="addToCart(choosenProduct)">BUY NOW!</button>
+        </div>
+       
+    </div>
+     <div class="payment">
+            <h1 class="payTitle">Personal Information</h1>
+            <label>Name and Surname</label>
+            <input type="text" placeholder="Peeyush Gupta" class="payInput">
+            <label>Phone Number</label>
+            <input type="text" placeholder="969823----" class="payInput">
+            <label>Address</label>
+            <input type="text" placeholder="Elton St 21 22-145" class="payInput">
+            <h1 class="payTitle">Card Information</h1>
+            <div class="cardIcons">
+                <img src="./img/visa.png" width="40" alt="" class="cardIcon">
+                <img src="./img/master.png" alt="" width="40" class="cardIcon">
+            </div>
+            <input type="password" class="payInput" placeholder="Card Number">
+            <div class="cardInfo">
+                <input type="text" placeholder="mm" class="payInput sm">
+                <input type="text" placeholder="yyyy" class="payInput sm">
+                <input type="text" placeholder="cvv" class="payInput sm">
+            </div>
+            <button class="payButton">Place Order</button>
+            <span class="close">X</span>
+        </div>
+
+ <div class="gallery">
+    <div class="galleryItem" data-aos="fade-up" data-aos-duration="2000">
+        <h1 class="galleryTitle">Be Yourself!</h1>
+        <img src="https://images.pexels.com/photos/9295809/pexels-photo-9295809.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Be Yourself" class="galleryImg">
+    </div>
+    <div class="galleryItem" data-aos="fade-up" data-aos-duration="2000">
+        <h1 class="galleryTitle">Focus!</h1>
+
+        <img src="https://images.pexels.com/photos/1040427/pexels-photo-1040427.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Focus" class="galleryImg">
+    </div>
+    <div class="galleryItem" data-aos="fade-up" data-aos-duration="2000">
+        <h1 class="galleryTitle">Be Different!</h1>
+        <img src="https://images.unsplash.com/photo-1556906781-9a412961c28c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bmlrZSUyMGpvcmRhbnxlbnwwfHwwfHx8MA%3D%3D" alt="Be Different" class="galleryImg">
+    </div>
+    <div class="galleryItem" data-aos="fade-up" data-aos-duration="2000">
+        <h1 class="galleryTitle">Be Stylish!</h1>
+
+        <img src="https://static.nike.com/a/images/f_auto/dpr_3.0,cs_srgb/h_553,c_limit/b79b4dba-2669-4a59-9eb8-266f33ca96c4/the-most-memorable-shoes-by-mj-in-the-last-dance.jpg" alt="Be Stylish" class="galleryImg">
+    </div>
+</div>
+
+
+
+    <footer data-aos="fade-down" data-aos-duration="2000">
+        <div class="footerLeft">
+            <div class="footerMenu">
+                <h1 class="fMenuTitle">About Us</h1>
+                <ul class="fList">
+                    <li class="fListItem">Company</li>
+                    <li class="fListItem">Contact</li>
+                    <li class="fListItem">Careers</li>
+                    <li class="fListItem">Affiliates</li>
+                    <li class="fListItem">Stores</li>
+                </ul>
+            </div>
+            <div class="footerMenu">
+                <h1 class="fMenuTitle">Useful Links</h1>
+                <ul class="fList">
+                    <li class="fListItem">Support</li>
+                    <li class="fListItem">Refund</li>
+                    <li class="fListItem">FAQ</li>
+                    <li class="fListItem">Feedback</li>
+                    <li class="fListItem">Stories</li>
+                </ul>
+            </div>
+            <div class="footerMenu">
+                <h1 class="fMenuTitle">Products</h1>
+                <ul class="fList">
+                    <li class="fListItem">Air Force</li>
+                    <li class="fListItem">Air Jordan</li>
+                    <li class="fListItem">Blazer</li>
+                    <li class="fListItem">Crater</li>
+                    <li class="fListItem">Hippie</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footerRight">
+            <div class="footerRightMenu">
+                <div class="fMail">
+                    <input type="text" placeholder="Enter your Email" class="fInput">
+                    <button class="fButton">Join!</button>
+                </div>
+            </div>
+            <div class="footerRightMenu">
+                <h1 class="fMenuTitle">Follow Us here</h1>
+                <div class="fIcons">
+                    <a href="" ><i class="fab fa-facebook-f"></i></a>
+                    <a href="" ></a><i class="fab fa-twitter"></i></a>
+                    <a href="" ></a><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+    AOS.init();
+    const wrapper = document.querySelector(".sliderWrapper");
+    const menuItems = document.querySelectorAll(".menuItem");
+
+    const products = [
+        {
+            id: 1,
+            title: "Air Jordan",
+            price: 14900,
+            colors: [
+                { code: "lightgray", img: "./img/jordan.png" },
+                { code: "green", img: "./img/jordan2.png" }
+            ]
+        },
+        {
+            id: 2,
+            title: "Air Force",
+            price: 11900,
+            colors: [
+                { code: "black", img: "./img/air.png" },
+                { code: "darkblue", img: "./img/air2.png" }
+            ]
+        },
+        {
+            id: 3,
+            title: "Blazer",
+            price: 10900,
+            colors: [
+                { code: "lightgray", img: "./img/blazer.png" },
+                { code: "orange", img: "./img/blazer2.png" }
+            ]
+        },
+        {
+            id: 4,
+            title: "Crater",
+            price: 12900,
+            colors: [
+                { code: "black", img: "./img/crater.png" },
+                { code: "lightgray", img: "./img/crater2.png" }
+            ]
+        },
+        {
+            id: 5,
+            title: "Hippie",
+            price: 9900,
+            colors: [
+                { code: "gray", img: "./img/hippie.png" },
+                { code: "black", img: "./img/hippie2.png" }
+            ]
+        }
+    ];
+
+    let choosenProduct = products[0];
+
+    const currentProductImg = document.querySelector(".productImg");
+    const currentProductTitle = document.querySelector(".productTitle");
+    const currentProductPrice = document.querySelector(".productPrice");
+    const currentProductColors = document.querySelectorAll(".color");
+    const currentProductSizes = document.querySelectorAll(".size");
+
+    menuItems.forEach((item, index) => {
+        item.addEventListener("click", () => {
+            // Change the current slide
+            wrapper.style.transform = `translateX(${-100 * index}vw)`;
+
+            // Change the chosen product
+            choosenProduct = products[index];
+
+            // Change texts of current product
+            currentProductTitle.textContent = choosenProduct.title;
+            currentProductPrice.textContent = "₹" + choosenProduct.price;
+            currentProductImg.src = choosenProduct.colors[0].img;
+
+            // Assign new colors
+            currentProductColors.forEach((color, index) => {
+                color.style.backgroundColor = choosenProduct.colors[index].code;
+            });
+        });
+    });
+
+    currentProductColors.forEach((color, index) => {
+        color.addEventListener("click", () => {
+            currentProductImg.src = choosenProduct.colors[index].img;
+        });
+    });
+
+    currentProductSizes.forEach((size, index) => {
+        size.addEventListener("click", () => {
+            currentProductSizes.forEach((size) => {
+                size.style.backgroundColor = "white";
+                size.style.color = "black";
+            });
+            size.style.backgroundColor = "black";
+            size.style.color = "white";
+        });
+    });
+
+    const productButton = document.querySelector(".productButton");
+    const payment = document.querySelector(".payment");
+    const close = document.querySelector(".close");
+
+    close.addEventListener("click", () => {
+        payment.style.display = "none";
+    });
+
+    const cartIcon = document.getElementById('cart');
+    const cartCount = document.getElementById('cart-count');
+    const cartPopup = document.createElement('div');
+    cartPopup.classList.add('cart-popup');
+    cartPopup.innerHTML = `
+        <h3>Your Cart</h3>
+        <div class="cart-items" id="cart-items"></div>
+        <button class="checkout-btn" id="checkout-btn">Checkout</button>
+        <button class="close-cart" id="close-cart">x</button>
+    `;
+    document.body.appendChild(cartPopup);
+
+    cartIcon.addEventListener('click', () => {
+        cartPopup.style.display = cartPopup.style.display === 'flex' ? 'none' : 'flex';
+    });
+
+    document.getElementById('close-cart').addEventListener('click', () => {
+        cartPopup.style.display = 'none';
+    });
+
+    let cart = [];
+
+    function addToCart(product) {
+        cart.push(product);
+        updateCart();
+    }
+
+    function updateCart() {
+        const cartItemsContainer = document.getElementById('cart-items');
+        cartItemsContainer.innerHTML = ''; // Clear the cart items
+
+        cart.forEach(item => {
+            const cartItem = document.createElement('div');
+            cartItem.classList.add('cart-item');
+            cartItem.innerHTML = `
+                <span>${item.title}</span>
+                <span>₹${item.price}</span>
+                <button class="remove-btn" data-id="${item.id}">Remove</button>
+            `;
+            cartItemsContainer.appendChild(cartItem);
+        });
+
+        cartCount.textContent = cart.length;
+    }
+
+    // Use event delegation for removing items
+    document.getElementById('cart-items').addEventListener('click', function(event) {
+        if (event.target && event.target.classList.contains('remove-btn')) {
+            const productId = event.target.getAttribute('data-id');
+            removeFromCart(productId);
+        }
+    });
+
+    function removeFromCart(id) {
+        cart = cart.filter(item => item.id !== parseInt(id));
+        updateCart();
+    }
+
+    // Handle checkout button
+    document.getElementById('checkout-btn').addEventListener('click', () => {
+        // Open the payment section
+        const payment = document.querySelector('.payment');
+        payment.style.display = 'flex';
+    });
+
+    const paymentButton = document.querySelector(".payButton");
+
+    paymentButton.addEventListener("click", () => {
+        // You can do further validations here (e.g. form validation)
+        alert("Order has been placed successfully!");
+        // Reset cart
+        cart = [];
+        updateCart();
+        document.querySelector('.payment').style.display = 'none';
+    });
+
+    function toggleMenu() {
+        const userMenu = document.getElementById('userMenu');
+        
+        // Toggle the display between 'none' and 'block'
+        if (userMenu.style.display === 'none' || userMenu.style.display === '') {
+            userMenu.style.display = 'block';
+        } else {
+            userMenu.style.display = 'none';
+        }
+    }
+
+    // Function for "My Cart" button
+    function goToCart() {
+        alert("Redirecting to your cart...");
+        // Redirect to cart page (example)
+        window.location.href = 'cart.html'; 
+    }
+
+    // Function for "Log Out" button
+    function logout() {
+        alert("Logging out...");
+        // Log out functionality (example)
+        // You can add logic to log the user out here
+        window.location.href = 'login.html';
+    }
+</script>
+
+</body>
+
+</html>
